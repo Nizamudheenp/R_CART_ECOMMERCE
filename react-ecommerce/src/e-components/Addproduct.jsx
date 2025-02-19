@@ -33,7 +33,7 @@ function AddProduct() {
             // post new products
 
             const response = await axios.post(
-                `http://localhost:5000/api/user/product/creatProducts`,
+                `${import.meta.env.VITE_BACKEND_URL}/api/user/product/creatProducts`,
                 { name, description, price, category, image },
                 {
                     headers: {

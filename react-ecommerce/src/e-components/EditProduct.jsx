@@ -22,7 +22,7 @@ function EditProduct() {
 
     const fetchProduct = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/user/product/getProductById/${id}`);
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/product/getProductById/${id}`);
             setProduct(response.data);
         } catch (error) {
             console.error('Error fetching product:', error);
@@ -42,7 +42,7 @@ function EditProduct() {
             }
         };
         try {
-            await axios.put(`http://localhost:5000/api/user/product/updateProduct/${id}`, product, config);  // put that data
+            await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/user/product/updateProduct/${id}`, product, config);  // put that data
             navigate('/adminDashboard');
         } catch (error) {
             console.error('Error updating product:', error);
