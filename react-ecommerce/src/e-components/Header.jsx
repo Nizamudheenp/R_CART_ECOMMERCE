@@ -28,7 +28,7 @@ function Header({ searchTerm, setSearchTerm }) {
             setIsAdmin(JSON.parse(adminStatus));
         }
         const userDashboard = async () => {
-            const userResponse = await axios.get(`${import.meta.env.VITE_BACKEND_URL}0/api/user/userDashboard`, {
+            const userResponse = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/userDashboard`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
