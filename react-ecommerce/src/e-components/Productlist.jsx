@@ -59,7 +59,6 @@ function ProductList({searchTerm}) {
           </Col>
             ))}
         </Row>
-      
       </Container>
     </div>
   );
